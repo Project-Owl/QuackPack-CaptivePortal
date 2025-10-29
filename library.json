@@ -1,0 +1,50 @@
+{
+    "name": "QuackPack-CaptivePortal",
+    "version": "1.0.0",
+    "description": "Basic ClusterDuck Protocol captive portal functionality for messages and configuration.",
+    "keywords": [
+      "iot",
+      "lora",
+      "mesh",
+      "clusterduck",
+      "quackpack",
+      "owl",
+      "emergency-network",
+      "platformio",
+      "esp32"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Project-Owl/QuackPack-CaptivePortal"
+    },
+    "authors": [
+      {
+        "name": "OWL Integrations",
+        "url": "https://www.owlintegrations.com",
+        "email": "support@owlintegrations.com"
+      }
+    ],
+    "license": "Apache-2.0",
+    "homepage": "https://clusterduckprotocol.org",
+    "frameworks": "arduino",
+    "platforms": "espressif32",
+    "dependencies": [
+      {
+        "name": "ClusterDuck-Protocol",
+        "version": "https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol#network-routing"
+      }
+    ],
+    "export": {
+      "include": [
+        "src",
+        "examples",
+        "library.json",
+        "library.properties",
+        "platformio.ini",
+        "LICENSE",
+        "README.md"
+      ]
+    }
+  }
+  
+  
