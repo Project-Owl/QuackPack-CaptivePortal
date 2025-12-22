@@ -31,7 +31,7 @@
     "dependencies": [
       {
         "name": "ClusterDuck-Protocol",
-        "version": "https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol#network-routing"
+        "version": "https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol"
       }
     ],
     "export": {

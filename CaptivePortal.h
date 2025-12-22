@@ -12,28 +12,19 @@
 
 #pragma once
 
-#include "../utils/DuckUtils.h"
-#include "../utils/DuckError.h"
-#include "../utils/DuckLogger.h"
-
-#include "../radio/DuckLoRa.h"
-#include "../wifi/DuckWifi.h"
-#include "../CdpPacket.h"
-#include "../Ducks/Duck.h"
-
 #include <Update.h>
 #include <ESPAsyncWebServer.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <DNSServer.h>
 #include <ESPmDNS.h>
+#include <CDP.h>
 
-#include "../DuckEsp.h"
-#include "../CaptivePortal/portalPages/index.h"
-#include "../CaptivePortal/portalPages/wifiCredentials.h"
-#include "../CaptivePortal/portalPages/controlPanel.h"
-#include "../CaptivePortal/portalPages/cdpHome.h"
-#include "../CaptivePortal/portalPages/papaHome.h"
+#include "./src/CaptivePortal/portalPages/index.h"
+#include "./src/CaptivePortal/portalPages/wifiCredentials.h"
+#include "./src/CaptivePortal/portalPages/controlPanel.h"
+#include "./src/CaptivePortal/portalPages/cdpHome.h"
+#include "./src/CaptivePortal/portalPages/papaHome.h"
 
 #define AP_SCAN_INTERVAL_MS 10
 class CaptivePortal {
