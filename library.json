@@ -31,7 +31,8 @@
     "dependencies": [
       {
         "name": "ClusterDuck-Protocol",
-        "version": "https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol"
+        "version": "https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol",
+        "mathieucarbou/ESP Async WebServer": "^2.7.0"
       }
     ],
     "export": {

@@ -12,9 +12,11 @@
 
 #pragma once
 
+#include <Arduino.h>
 #include <Update.h>
 #include <ESPAsyncWebServer.h>
 #include <WiFi.h>
+#include <WiFiClient.h>
 #include <WiFiClientSecure.h>
 #include <DNSServer.h>
 #include <ESPmDNS.h>
