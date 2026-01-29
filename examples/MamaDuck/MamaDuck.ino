@@ -11,7 +11,7 @@
 
  #include <string>
  #include <arduino-timer.h>
- #include "../CaptivePortal.h"
+ #include "CaptivePortal.h"
  
  #ifdef SERIAL_PORT_USBVIRTUAL
  #define Serial SERIAL_PORT_USBVIRTUAL

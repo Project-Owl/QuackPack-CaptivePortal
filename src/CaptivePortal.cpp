@@ -1,4 +1,4 @@
-#include "../CaptivePortal.h"
+#include "CaptivePortal.h"
 
 #ifndef CDPCFG_WIFI_NONE
 int CaptivePortal::setupAccessPoint(const char* ap) {

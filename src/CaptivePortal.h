@@ -22,11 +22,11 @@
 #include <ESPmDNS.h>
 #include <CDP.h>
 
-#include "./src/CaptivePortal/portalPages/index.h"
-#include "./src/CaptivePortal/portalPages/wifiCredentials.h"
-#include "./src/CaptivePortal/portalPages/controlPanel.h"
-#include "./src/CaptivePortal/portalPages/cdpHome.h"
-#include "./src/CaptivePortal/portalPages/papaHome.h"
+#include "./portalPages/index.h"
+#include "./portalPages/wifiCredentials.h"
+#include "./portalPages/controlPanel.h"
+#include "./portalPages/cdpHome.h"
+#include "./portalPages/papaHome.h"
 
 #define AP_SCAN_INTERVAL_MS 10
 class CaptivePortal {
