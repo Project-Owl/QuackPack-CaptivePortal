@@ -46,6 +46,7 @@
    
    setupOK = true;
    Serial.println("[MAMA] Setup OK!");
+  //  portal->init(duck);
    portal = std::make_unique<CaptivePortal>(duck, CDPCFG_WEB_PORT);
    portal->launch();
  }

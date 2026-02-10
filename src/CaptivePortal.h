@@ -27,13 +27,12 @@
 #include "./portalPages/controlPanel.h"
 #include "./portalPages/cdpHome.h"
 #include "./portalPages/papaHome.h"
+#include "./QuackPack.h"
 
 #define AP_SCAN_INTERVAL_MS 10
-class CaptivePortal {
+class CaptivePortal : public QuackPack {
   public:
-    CaptivePortal(Duck<DuckWifi, DuckLoRa>& duck, int port = 80): duck(duck), port(port), webServer(port), events("/events") {}
-    std::string duckSession;
-    Duck<DuckWifi, DuckLoRa>& duck;
+    CaptivePortal(Duck<DuckWifi, DuckLoRa>& duck): webServer(CDPCFG_WEB_PORT), events("/events") {}
 
     /**
      * @brief Setup WiFi access point.
@@ -65,11 +64,15 @@ class CaptivePortal {
      */
     int setupWebServer();
 
-    void launch(){
+    void launch() override {
       this->setupAccessPoint();
       this->setupDns();
       this->setupWebServer();
     }
+    // void init(Duck& duck) override {
+    //   this->duck = &duck;
+    // }
+    const char* getName() const override { return "captivePortal"; }
 
   private:
 
@@ -79,13 +82,14 @@ class CaptivePortal {
     DNSServer dnsServer;
     const char* DNS = "duck";
     const byte DNS_PORT = 53;
+    int port = CDPCFG_WEB_PORT;
 
-    //must be initialized in this order for webserver to work
-    int port;
     AsyncWebServer webServer;
     AsyncEventSource events;
 
     std::array<byte,8> deviceId;
 
     std::string portal = "";
+    std::string duckSession;
+    Duck<DuckWifi, DuckLoRa>* duck;
 };
