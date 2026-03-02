@@ -1,0 +1,9 @@
+{
+    "header": "CaptivePortal.h",
+    "declaration": "std::unique_ptr<CaptivePortal> portal;",
+    "setup_code": [
+        "portal = std::make_unique<CaptivePortal>(duck, WEB_PORT);"
+    ],
+    "defs": ["WEB_PORT"], 
+    "topic": "health"
+}
